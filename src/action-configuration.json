@@ -1,0 +1,19 @@
+{
+  "name": "general-details-in-panel",
+  "title": "App Module Assistor",
+  "entity_type": [
+    "product_area"
+  ],
+  "views": [
+    "list",
+    "details"
+  ],
+  "icon": "details",
+  "url": "{bundle_url}/app_modules_assistor/index.html",
+  "mode": {
+    "name": "side_panel",
+    "modules": [
+      "quality"
+    ]
+  }
+}
