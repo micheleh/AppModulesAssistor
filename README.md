@@ -8,6 +8,8 @@ When you open `index.html`, you will be presented with a series of questions rel
 
 ## How to Build It
 
+### For Mac/Linux Users:
+
 To package this application into a zip file, follow these steps:
 
 1. Ensure you have the necessary permissions to execute shell scripts:
@@ -22,8 +24,25 @@ To package this application into a zip file, follow these steps:
 
 3. The script will create a directory named `target` (if it doesn't already exist) and place a zip file named `AppModulesAssistor.zip` in it containing all project files.
 
+### For Windows Users:
+
+To package this application into a zip file, follow these steps:
+
+1. Open Command Prompt.
+
+2. Run the `build.cmd` script:
+   ```cmd
+   build.cmd
+   ```
+
+3. The script will create a directory named `target` (if it doesn't already exist) and place a zip file named `AppModulesAssistor.zip` in it containing all project files.
+
+
 ## How to Upload It
-To upload the zip file to the Octane instance that runs at http://localhost:808/dev, follow these steps:
+
+### For Mac/Linux Users:
+
+To upload the zip file to the Octane instance that runs at http://localhost:8080/dev, follow these steps:
 
 1. Ensure you have the necessary permissions to execute shell scripts:
    ```bash
@@ -34,3 +53,14 @@ To upload the zip file to the Octane instance that runs at http://localhost:808/
    ```bash
    ./upload.sh
    ```
+
+### For Windows Users:
+
+To upload the zip file to the Octane instance that runs at http://localhost:8080/dev, follow these steps:
+
+1. Open Command Prompt.
+
+2. Run the `upload.cmd` script:
+    ```cmd
+    upload.cmd
+    ```
