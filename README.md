@@ -8,59 +8,22 @@ When you open `index.html`, you will be presented with a series of questions rel
 
 ## How to Build It
 
-### For Mac/Linux Users:
-
 To package this application into a zip file, follow these steps:
 
-1. Ensure you have the necessary permissions to execute shell scripts:
+1. Ensure you have Python installed on your system.
+2. Run the `build.py` script:
    ```bash
-   chmod +x build.sh
-   ```
-
-2. Run the `build.sh` script:
-   ```bash
-   ./build.sh
+   python build.py
    ```
 
 3. The script will create a directory named `target` (if it doesn't already exist) and place a zip file named `AppModulesAssistor.zip` in it containing all project files.
-
-### For Windows Users:
-
-To package this application into a zip file, follow these steps:
-
-1. Open Command Prompt.
-
-2. Run the `build.cmd` script:
-   ```cmd
-   build.cmd
-   ```
-
-3. The script will create a directory named `target` (if it doesn't already exist) and place a zip file named `AppModulesAssistor.zip` in it containing all project files.
-
 
 ## How to Upload It
 
-### For Mac/Linux Users:
-
 To upload the zip file to the Octane instance that runs at http://localhost:8080/dev, follow these steps:
 
-1. Ensure you have the necessary permissions to execute shell scripts:
+1. Ensure you have Python installed on your system.
+2. Run the `upload.py` script:
    ```bash
-   chmod +x upload.sh
+   python upload.py
    ```
-
-2. Run the `upload.sh` script:
-   ```bash
-   ./upload.sh
-   ```
-
-### For Windows Users:
-
-To upload the zip file to the Octane instance that runs at http://localhost:8080/dev, follow these steps:
-
-1. Open Command Prompt.
-
-2. Run the `upload.cmd` script:
-    ```cmd
-    upload.cmd
-    ```
