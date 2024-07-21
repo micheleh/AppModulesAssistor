@@ -14,6 +14,7 @@ UPLOAD_ENDPOINT_TEMPLATE_NO_ACTION_NAME = f"{EXTERNAL_ACTIONS_ENDPOINT}bundle"
 FILE_PATH = "target/AppModulesAssistor.zip"
 
 
+# Sign in to Octane and return the cookies needed for authentication
 def sign_in():
     response = requests.post(
         AUTH_ENDPOINT,
@@ -28,6 +29,7 @@ def sign_in():
         return None
 
 
+# Retrieve the name of the action from the configuration file
 def get_action_name():
     try:
         with open(ACTION_CONFIGURATION_FILE, 'r') as file:
@@ -42,6 +44,7 @@ def get_action_name():
         return None
 
 
+# Construct the URL for uploading the external entity action based on whether an action with the same name already exists
 def construct_upload_endpoint(action_name=None):
     if action_name:
         return UPLOAD_ENDPOINT_TEMPLATE_WITH_ACTION_NAME.format(action_name=action_name)
@@ -49,6 +52,7 @@ def construct_upload_endpoint(action_name=None):
         return UPLOAD_ENDPOINT_TEMPLATE_NO_ACTION_NAME
 
 
+# Check if there are any existing external entity actions with the same name as the one being uploaded
 def check_existing_actions(cookies, action_name):
     response = requests.get(EXTERNAL_ACTIONS_ENDPOINT, cookies=cookies)
     if response.status_code == 200:
@@ -59,7 +63,8 @@ def check_existing_actions(cookies, action_name):
     return None
 
 
-def upload_file(cookies, guid, action_name):
+# Upload the bundle containing the external entity action to the server
+def upload_bundle(cookies, guid, action_name):
     upload_endpoint_url = construct_upload_endpoint(action_name if guid else None)
 
     with open(FILE_PATH, 'rb') as file:
@@ -105,7 +110,7 @@ def main():
     else:
         print("No existing External Entity Action found. Proceeding fresh upload.")
 
-    upload_file(cookies, guid_to_use, action_name)
+    upload_bundle(cookies, guid_to_use, action_name)
 
 
 if __name__ == '__main__':
