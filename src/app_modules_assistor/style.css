@@ -44,11 +44,13 @@ body {
     font-weight: 500;
 }
 
+.options {
+    display: flex; /* Using Flexbox for layout */
+    justify-content: center; /* Centering child elements horizontally */
+}
+
 .options button {
     margin-right: 10px;
-
-    button {
-        padding: 10px;
-        border-radius: 5px;
-    }
+    padding: 10px;
+    border-radius: 5px;
 }
