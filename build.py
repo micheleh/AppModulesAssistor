@@ -1,8 +1,8 @@
 import os
 import zipfile
 
-def create_zip_from_source(source_dir="src", zip_file="AppModulesAssistor.zip", target_dir="target"):
 
+def create_zip_from_source(source_dir="src", zip_file="AppModulesAssistor.zip", target_dir="target"):
     # Save the current working directory
     original_directory = os.getcwd()
 
@@ -24,6 +24,7 @@ def create_zip_from_source(source_dir="src", zip_file="AppModulesAssistor.zip", 
     finally:
         # Return to the original directory regardless of success or failure
         os.chdir(original_directory)
+
 
 if __name__ == "__main__":
     create_zip_from_source()
