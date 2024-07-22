@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     margin: 0;
     background-color: #f0f0f0;
 }
@@ -15,7 +15,14 @@ body {
     text-align: left;
     background-color: white;
     padding: 20px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+
+    width: 100%;
+
+    max-width: 1200px; /* You can set a max-width if desired */
+
+    height: 100%;
+
+    box-sizing: border-box; /* To include padding in total width/height calculation */
 }
 
 .wrapper {
@@ -24,9 +31,12 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
 
-    /* Ensuring all wrapper divs have the same width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+
     width: 100%;
     max-width: 600px;
+
+    box-sizing: border-box; /* To include padding in total width/height calculation */
 }
 
 .question {
