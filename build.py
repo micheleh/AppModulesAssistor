@@ -21,6 +21,11 @@ def create_zip_from_source(source_dir="src", zip_file="AppModulesAssistor.zip", 
                     arcname = os.path.relpath(file_path, ".")
                     zipf.write(file_path, arcname)
 
+        print(f"Success: Created {zip_file} in {target_dir}")
+
+    except Exception as e:
+        print(f"Failed to create zip file: {e}")
+
     finally:
         # Return to the original directory regardless of success or failure
         os.chdir(original_directory)
