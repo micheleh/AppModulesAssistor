@@ -1,6 +1,8 @@
 import requests
 import json
 
+from build import create_zip_from_source
+
 # Define variables
 ACTION_NAME = 'app-modules-assistor-panel'
 ACTION_CONFIGURATION_FILE = 'src/action-configuration.json'
@@ -95,6 +97,9 @@ def upload_bundle(cookies, guid, action_name):
 
 
 def main():
+    # first ensure there is a fresh build
+    create_zip_from_source()
+
     cookies = sign_in()
     if not cookies:
         exit(1)
