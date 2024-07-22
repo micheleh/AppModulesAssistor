@@ -47,6 +47,7 @@ body {
 .options {
     display: flex; /* Using Flexbox for layout */
     justify-content: center; /* Centering child elements horizontally */
+    margin-top: 20px;
 }
 
 .options button {
