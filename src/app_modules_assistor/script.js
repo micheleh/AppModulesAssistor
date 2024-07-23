@@ -71,6 +71,14 @@ function displayStep(step) {
 
     container.appendChild(wrapperDiv);
 
+    // Use setTimeout for smooth scrolling after rendering
+    setTimeout(() => {
+        document.documentElement.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    }, 100); // Adjust timeout as needed,100 ms should be sufficient
+
     if (flowchart[step].final) {
         const resetButton = document.createElement('button');
         resetButton.innerText = 'Reset';
