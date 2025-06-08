@@ -39,6 +39,10 @@ body {
     background-color: hsl(189, 100%, 97.04%); /* Very Light Pastel Cyan */
 }
 
+.faded {
+    opacity: 0.5;
+}
+
 .question {
     font-size: 16px;
     font-weight: 500;
